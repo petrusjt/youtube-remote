@@ -9,7 +9,6 @@ def tap_key(controller, key):
     controller.release(key)
 
 app = flask.Flask(__name__, static_folder="static", template_folder="template")
-app.config["DEBUG"] = True
 
 keyboard = Controller()
 
@@ -29,7 +28,9 @@ def yt_startvid():
     os.system(f"chrome {url}")
     
     sleep(5)
+    # Edit the coordinates at the next line to match your monitor's
     ms.position = (2542, 80)
+    #
     print(f"mouse position: {ms.position}")
     ms.click(mouse.Button.left, 1)
 
