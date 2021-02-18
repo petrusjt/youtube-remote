@@ -28,3 +28,13 @@ These can be installed with `pip`
     - This is needed because when you enter a new youtube link, it forcefully stops all chrome instances and opens a new. Chrome will think it was a crash and prompts you to restore you last session.
     - TIP: to find the right coordinates, just close Chrome from the task manager, reopen it, take a screenshot (Print Screen/PrtScr button) open MS Paint, press ctrl+v and hover your mouse on the X icon. The coordinates will show at the left bottom corner.
 
+## Usage
+
+- Start the server with `python app.py` so you can access the webapge hosted by this app.
+- Type your PC's local IP to the address bar on your device you want to use as the "remote".
+- Insert a youtube link in the input field then press play.
+- From now on you can use the buttons to control the player.
+
+
+
+
