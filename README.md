@@ -28,9 +28,3 @@ These can be installed with `pip`
     - This is needed because when you enter a new youtube link, it forcefully stops all chrome instances and opens a new. Chrome will think it was a crash and prompts you to restore you last session.
     - TIP: to find the right coordinates, just close Chrome from the task manager, reopen it, take a screenshot (Print Screen/PrtScr button) open MS Paint, press ctrl+v and hover your mouse on the X icon. The coordinates will show at the left bottom corner.
 
-## Configuration on Linux
-
-1. Add chrome to the PATH environment variable
-    - If you use chromium, alias it as chrome
-        - `alias chrome=chromium`
-2. 2nd and 3rd points are basically the same as on Windows.
