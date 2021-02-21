@@ -3,6 +3,7 @@ import os
 from pynput.keyboard import Key, KeyCode, Controller
 import pynput.mouse as mouse
 from time import sleep
+import json
 
 def tap_key(controller, key):
     controller.press(key)
@@ -20,26 +21,27 @@ def home():
 
 @app.route("/youtube/startvid", methods=['POST'])
 def yt_startvid():
-
-    url = flask.request.form["url"]
-    #print(flask.request.json)
+    try:
+        url = flask.request.form["url"]
+    except Exception as e:
+        print(e)
+        url = json.loads(flask.request.data)["url"]
+    
+    print(flask.request.data)
     print(f"Request to open url {url}")
     os.system("taskkill /F /IM chrome.exe")
-    os.system(f"chrome {url}")
-    
-    sleep(5)
-    # Edit the coordinates at the next line to match your monitor's
-    ms.position = (2542, 80)
-    #
-    print(f"mouse position: {ms.position}")
-    ms.click(mouse.Button.left, 1)
+    os.system(f"chrome --kiosk {url}")
 
     return ""
 
 @app.route("/youtube/player-action", methods=['POST'])
 def yt_player_action():
     global keyboard
-    action = flask.request.form["action"]
+    try:
+        action = flask.request.form["action"]
+    except Exception as e:
+        print(e)
+        action = json.loads(flask.request.data)["action"]
 
     print(f"Request to {action}")
 

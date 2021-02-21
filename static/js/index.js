@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    let IPAddress = "Your PC's local IP here";
+    let IPAddress = "192.168.1.10";
     let startvidURL = `http://${IPAddress}/youtube/startvid`;
     let actionURL = `http://${IPAddress}/youtube/player-action`;
 

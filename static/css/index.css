@@ -30,5 +30,5 @@ div > button{
     display: block;
     width: 80vw;
     margin: auto;
-    height: 5vh;
+    min-height: 5vh;
 }
