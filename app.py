@@ -1,7 +1,7 @@
 import flask
-from index import index
-from startvid import startvid
-from yt_player_actions import yt_player_actions
+from api.view_serving_endpoints.index import index
+from api.startvid import startvid
+from api.yt_player_actions import yt_player_actions
 
 app = flask.Flask(__name__, static_folder="static", template_folder="template")
 app.register_blueprint(index)
